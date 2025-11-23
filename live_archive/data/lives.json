@@ -179,7 +179,7 @@
     "date": "2025-02-26",
     "artist": "米津玄師",
     "venue": "東京ドーム",
-    "title": "米津玄師 2025 TOUR / JUNK",
+    "title": "2025 TOUR / JUNK",
     "desc": "",
     "playlist": "0Ryh8c0KhvDQkn3KcFOgKC"
   },
@@ -198,5 +198,13 @@
     "title": "夏の全国アリーナツアー2018",
     "desc": "",
     "playlist": "63cKVJFvx8RZcQoG9MLIkg"
+  },
+  {
+    "date": "2026-11-11",
+    "artist": "米津玄師",
+    "venue": "Kアリーナ横浜",
+    "title": "2026 TOUR / GHOST",
+    "desc": "",
+    "playlist": ""
   }
 ]
