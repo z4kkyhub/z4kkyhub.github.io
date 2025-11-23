@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 10vh auto;
+    padding: 3rem;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #00fff7;
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+.profile {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #ff4fa3;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.gitlab {
+    background-color: #fc6d26;
+    color: #fff;
+}
+
+.gitlab:hover {
+    background-color: #e05c1e;
+    box-shadow: 0 0 20px #fc6d26;
+}
+
+.spotify {
+    background-color: #1db954;
+    color: #fff;
+}
+
+.spotify:hover {
+    background-color: #1ed760;
+    box-shadow: 0 0 20px #1db954;
+}
+
+.live-archive {
+    background-color: #6a5acd;
+    color: #fff;
+}
+
+.live-archive:hover {
+    background-color: #7b68ee;
+    box-shadow: 0 0 20px #6a5acd;
+}
+
+.lyric-encounter {
+    background-color: #20c997;
+    color: #fff;
+}
+
+.lyric-encounter:hover {
+    background-color: #38d9a9;
+    box-shadow: 0 0 20px #20c997;
+}
