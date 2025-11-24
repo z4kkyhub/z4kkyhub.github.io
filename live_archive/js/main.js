@@ -1,3 +1,27 @@
+// Spotify の通常 URL から embed 用 iframe HTML を生成する
+function createSpotifyEmbedHtml(url) {
+  if (!url) return '';
+
+  // 例:
+  // https://open.spotify.com/playlist/7JUG7NdQZkikHCzxTgXT95?si=...
+  // https://open.spotify.com/intl-ja/album/6bMTvsdVcSvYMkib8VKSTU?si=...
+  const match = url.match(
+    /^https?:\/\/open\.spotify\.com\/(?:intl-[^/]+\/)?(playlist|album|track|artist|show|episode)\/([a-zA-Z0-9]+)/
+  );
+
+  if (!match) {
+    console.warn('Spotify URL の形式が想定外です:', url);
+    return '';
+  }
+
+  const type = match[1]; // playlist / album / track / ...
+  const id = match[2];
+
+  const embedSrc = `https://open.spotify.com/embed/${type}/${id}`;
+
+  return `<iframe src="${embedSrc}" allow="encrypted-media"></iframe>`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const timeline = document.getElementById('timeline');
   const events = [];
@@ -35,11 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>${live.artist} @ ${live.venue}</h3>
             <h4>${live.title || ''}</h4>
             <p>${live.desc || ''}</p>
-            ${
-              live.playlist
-                ? `<iframe src="https://open.spotify.com/embed/playlist/${live.playlist}" allow="encrypted-media"></iframe>`
-                : ''
-            }
+            ${live.spotify ? createSpotifyEmbedHtml(live.spotify) : ''}
           </div>
         `;
 
